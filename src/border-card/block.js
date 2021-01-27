@@ -37,12 +37,12 @@ const { useDispatch, useSelect } = wp.data;
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType("cgb/block-vocabulary-card", {
+registerBlockType("cgb/block-vocabulary-card-border", {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __("Simple Card"), // Block title.
+	title: __("Simple Card w/border"), // Block title.
 	icon: "index-card", // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: "common", // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
-	keywords: [__("card"), __("cink"), __("content")],
+	keywords: [__("card"), __("border"), __("content")],
 	attributes: {
 		bgColor: {
 			type: "string",
@@ -56,9 +56,6 @@ registerBlockType("cgb/block-vocabulary-card", {
 			default: "black",
 		},
 		txtColorSlug: {
-			type: "string",
-		},
-		contentSubTitle: {
 			type: "string",
 		},
 		contentTitle: {
@@ -90,7 +87,6 @@ registerBlockType("cgb/block-vocabulary-card", {
 		const txtColor = props.attributes.txtColor;
 		const txtColorSlug = props.attributes.txtColorSlug;
 		const contentTitle = props.attributes.contentTitle;
-		const contentSubTitle = props.attributes.contentSubTitle;
 		const contentText = props.attributes.contentText;
 		const contentLink = props.attributes.contentLink;
 		const { attributes: className, setAttributes } = props;
@@ -98,9 +94,6 @@ registerBlockType("cgb/block-vocabulary-card", {
 
 		const onChangeContentTitle = (contentTitle) => {
 			setAttributes({ contentTitle });
-		};
-		const onChangeContentSubTitle = (contentSubTitle) => {
-			setAttributes({ contentSubTitle });
 		};
 		const onChangeContentText = (contentText) => {
 			setAttributes({ contentText });
@@ -115,18 +108,7 @@ registerBlockType("cgb/block-vocabulary-card", {
 					title={__("Color Settings", "creativecommons")}
 					colorSettings={[
 						{
-							label: __("Background Color"),
-							value: bgColor,
-							onChange: (colorValue) => {
-								let colorClass = getColorObjectByColorValue(colors, colorValue);
-								props.setAttributes({
-									bgColor: colorValue,
-									bgColorSlug: colorClass.slug,
-								});
-							},
-						},
-						{
-							label: __("Text Color"),
+							label: __("Title Color"),
 							value: txtColor,
 							onChange: (colorValue) => {
 								let colorClass = getColorObjectByColorValue(colors, colorValue);
@@ -140,22 +122,12 @@ registerBlockType("cgb/block-vocabulary-card", {
 				/>
 			</InspectorControls>,
 			<div key="2">
-				<div
-					class="card simple card"
-					style={{ backgroundColor: bgColor, color: txtColor }}
-				>
-					<span className="subtitle">
-						<RichText
-							placeholder={__("Subtitle", "CreativeCommons")}
-							keepPlaceholderOnFocus={true}
-							onChange={onChangeContentSubTitle}
-							value={contentSubTitle}
-						/>
-					</span>
+				<div className={`card border-card`}>
 					<h4>
 						<div className="cc-cgb-richtext-input">
 							<RichText
 								className={className}
+								style={{ color: txtColor }}
 								placeholder={__("This content", "CreativeCommons")}
 								keepPlaceholderOnFocus={true}
 								onChange={onChangeContentTitle}
@@ -209,25 +181,15 @@ registerBlockType("cgb/block-vocabulary-card", {
 		const txtColor = props.attributes.txtColor;
 		const txtColorSlug = props.attributes.txtColorSlug;
 		const contentTitle = props.attributes.contentTitle;
-		const contentSubTitle = props.attributes.contentSubTitle;
 		const contentText = props.attributes.contentText;
 		const contentLink = props.attributes.contentLink;
-		const classes = [
-			"card",
-			"simple-card",
-			"no-border",
-			"background-" + bgColorSlug,
-			"has-background-" + bgColorSlug,
-			"text-" + txtColorSlug,
-			"has-text-" + txtColorSlug,
-		].join(" ");
+		const classes = ["card", "border-card", "has-text-" + txtColorSlug].join(
+			" "
+		);
 		if (contentLink != undefined) {
 			return (
 				<div className={props.className}>
 					<a href={contentLink} className={classes}>
-						{contentSubTitle && (
-							<span className="subtitle">{contentSubTitle}</span>
-						)}
 						<h3>{contentTitle}</h3>
 						{contentText && <p>{contentText}</p>}
 					</a>
@@ -237,9 +199,6 @@ registerBlockType("cgb/block-vocabulary-card", {
 			return (
 				<div className={props.className}>
 					<div className={classes}>
-						{contentSubTitle && (
-							<span className="subtitle">{contentSubTitle}</span>
-						)}
 						<h3>{contentTitle}</h3>
 						{contentText && <p>{contentText}</p>}
 					</div>

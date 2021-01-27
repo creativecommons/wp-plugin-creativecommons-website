@@ -1,2 +1,55 @@
-.card.simple-card{display:block;padding:1.6rem}
-.card.simple-card{display:block;padding:1.6rem}
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.card.simple-card {
+  display: block;
+  padding: 1.6rem; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.card.simple-card {
+  display: block;
+  padding: 1.6rem; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.card.border-card {
+  display: block;
+  padding: 1.6rem; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.stats-card .number {
+  font-size: 3.8rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700; }
+
+.stats-card .caption {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700; }
