@@ -1,4 +1,7 @@
 # Vocabulary Blocks
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 This project pretend to add some of the Vocabulary components as Gutenberg blocks.
 This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
 
@@ -19,3 +22,23 @@ Below you will find some information on how to run scripts.
 - Provides all the configurations so you can customize the project as you want.
 - It's a one-way street, `eject` and you have to maintain everything yourself.
 - You don't normally have to `eject` a project because by ejecting you lose the connection with `create-guten-block` and from there onwards you have to update and maintain all the dependencies on your own.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://davidhuertas.dev"><img src="https://avatars.githubusercontent.com/u/77805983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Huertas</b></sub></a><br /><a href="#maintenance-ikurotime" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
