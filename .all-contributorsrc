@@ -16,7 +16,7 @@
     }
   ],
   "contributorsPerLine": 7,
-  "contributorsSortAlphabetically", true,
+  "contributorsSortAlphabetically", "true",
   "projectName": "wp-plugin-cc-gutenberg-blocks",
   "projectOwner": "creativecommons",
   "repoType": "github",
