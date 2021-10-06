@@ -1,6 +1,6 @@
 # Vocabulary Blocks
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 This project pretend to add some of the Vocabulary components as Gutenberg blocks.
 This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
@@ -33,6 +33,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://davidhuertas.dev"><img src="https://avatars.githubusercontent.com/u/77805983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Huertas</b></sub></a><br /><a href="#maintenance-ikurotime" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="http://kritigodey.com"><img src="https://avatars.githubusercontent.com/u/287034?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kriti Godey</b></sub></a><br /><a href="https://github.com/creativecommons/wp-plugin-cc-gutenberg-blocks/pulls?q=is%3Apr+reviewed-by%3Akgodey" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
