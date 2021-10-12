@@ -1,13 +1,15 @@
 {
   "name": "vocabulary-blocks-cgb-guten-block",
   "version": "1.0.0",
+  "description": "",
   "private": true,
   "scripts": {
-    "start": "cgb-scripts start",
-    "build": "cgb-scripts build",
-    "eject": "cgb-scripts eject"
+    "build": "wp-scripts build plugins/index.js",
+    "start": "wp-scripts start plugins/index.js",
+    "wp-env": "wp-env"
   },
-  "dependencies": {
-    "cgb-scripts": "1.23.1"
+  "dependencies": {},
+  "devDependencies": {
+    "@wordpress/scripts": "18.0.1"
   }
 }
