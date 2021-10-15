@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "wp-scripts build plugins/index.js",
-    "start": "wp-scripts start plugins/index.js",
+    "build": "wp-scripts build src/index.js",
+    "start": "wp-scripts start src/index.js",
     "wp-env": "wp-env"
   },
   "dependencies": {},
