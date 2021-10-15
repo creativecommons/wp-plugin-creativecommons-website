@@ -1,5 +1,5 @@
-import { registerBlockType } from "@wordpress/blocks";
-import * as UsersList from "./users-list/index";
+import { registerBlockType } from '@wordpress/blocks';
+import * as UsersList from './users-list/index';
 
 const blocks = [ UsersList ];
 
