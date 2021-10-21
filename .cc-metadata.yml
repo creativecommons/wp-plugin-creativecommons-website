@@ -7,4 +7,4 @@ technologies: Javascript, React, WordPress
 # Whether this repository should be featured on the CC Open Source site
 featured: false
 # Slack channel name
-slack: "cc-dev-wordpress"
+slack: 'cc-dev-wordpress'
