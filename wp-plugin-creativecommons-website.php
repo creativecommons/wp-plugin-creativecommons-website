@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: Common Plugin
+ * Plugin Name: Creative Commons website plugin
  * Author: Shailee Mehta
  * Version: 1.0.0
  */
