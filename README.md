@@ -1,5 +1,6 @@
 # Common Blocks
-This project is built using @wordpress/scripts. It is used to create custom blocks. Please following the steps given below to modify or create blocks.
+
+This WordPress plugin provides custom functionality for the creativecommons.org website.
 
 # Setup
 After cloning the repository, install nodee modules using `npm i`.
