@@ -1,4 +1,4 @@
-# Common Blocks
+# CreativeCommons.org website WordPress plugin
 
 This WordPress plugin provides custom functionality for the creativecommons.org website.
 
