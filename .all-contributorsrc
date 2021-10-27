@@ -40,6 +40,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fmann",
+      "name": "Floyd Mann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/711497?v=4",
+      "profile": "https://github.com/fmann",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
