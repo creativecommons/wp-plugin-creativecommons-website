@@ -25,10 +25,10 @@
  *
  */
 
-include_once 'cc-author/cc-author-group-taxonomy.php';
-include_once 'cc-author/widgets/cc-author-news-widget.php';
-include_once 'cc-author/widgets/cc-author-navigation-sidebar-widget.php';
-include_once 'cc-author/shortcodes/cc-author-shortcode-team.php';
+include_once 'cc-author-group-taxonomy.php';
+include_once 'widgets/cc-author-news-widget.php';
+include_once 'widgets/cc-author-navigation-sidebar-widget.php';
+include_once 'shortcodes/cc-author-shortcode-team.php';
 
 function cc_author_customize_breadcrumb($breadcrumb_trail) {
   global $wp_query;
