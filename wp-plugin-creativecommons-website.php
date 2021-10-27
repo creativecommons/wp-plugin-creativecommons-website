@@ -6,7 +6,7 @@
  * Version: 1.0.0
  */
 
-function load_plugin()
+function load_cc_gutenberg_blocks()
 {
     wp_enqueue_script(
         'myguten-script',
@@ -17,4 +17,4 @@ function load_plugin()
 
     register_block_type('common/users-list');
 }
-add_action('enqueue_block_editor_assets', 'load_plugin');
+add_action('enqueue_block_editor_assets', 'load_cc_gutenberg_blocks');
