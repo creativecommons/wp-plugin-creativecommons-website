@@ -1,7 +1,7 @@
 # CreativeCommons.org website WordPress plugin
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This WordPress plugin provides custom functionality for the creativecommons.org website.
@@ -69,6 +69,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/fmann"><img src="https://avatars.githubusercontent.com/u/711497?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Floyd Mann</b></sub></a><br /><a href="https://github.com/creativecommons/wp-plugin-creativecommons-website/commits?author=fmann" title="Code">💻</a></td>
     <td align="center"><a href="http://hugo.solar"><img src="https://avatars.githubusercontent.com/u/894708?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo Solar</b></sub></a><br /><a href="https://github.com/creativecommons/wp-plugin-creativecommons-website/commits?author=hugosolar" title="Code">💻</a></td>
     <td align="center"><a href="http://kritigodey.com"><img src="https://avatars.githubusercontent.com/u/287034?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kriti Godey</b></sub></a><br /><a href="https://github.com/creativecommons/wp-plugin-creativecommons-website/pulls?q=is%3Apr+reviewed-by%3Akgodey" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/shailee-m"><img src="https://avatars.githubusercontent.com/u/10625985?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shailee Mehta</b></sub></a><br /><a href="https://github.com/creativecommons/wp-plugin-creativecommons-website/commits?author=shailee-m" title="Code">💻</a> <a href="https://github.com/creativecommons/wp-plugin-creativecommons-website/commits?author=shailee-m" title="Documentation">📖</a></td>
   </tr>
 </table>
 
