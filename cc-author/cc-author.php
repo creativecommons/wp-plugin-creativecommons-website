@@ -25,19 +25,11 @@
  *
  */
 
-include_once 'cc-author-group-taxonomy.php';
-include_once 'widgets/cc-author-news-widget.php';
-include_once 'widgets/cc-author-navigation-sidebar-widget.php';
-include_once 'shortcodes/cc-author-shortcode-team.php';
+include_once 'cc-author/cc-author-group-taxonomy.php';
+include_once 'cc-author/widgets/cc-author-news-widget.php';
+include_once 'cc-author/widgets/cc-author-navigation-sidebar-widget.php';
+include_once 'cc-author/shortcodes/cc-author-shortcode-team.php';
 
-
-add_action( 'show_user_profile', 'cc_author_add_custom_user_profile_fields' );
-add_action( 'edit_user_profile', 'cc_author_add_custom_user_profile_fields' );
-
-add_action( 'personal_options_update',  'cc_author_save_custom_user_profile_fields' );
-add_action( 'edit_user_profile_update', 'cc_author_save_custom_user_profile_fields' );
-
-add_action('bcn_after_fill', 'cc_author_customize_breadcrumb');
 function cc_author_customize_breadcrumb($breadcrumb_trail) {
   global $wp_query;
   if ( is_author() ){
@@ -50,7 +42,6 @@ function cc_author_customize_breadcrumb($breadcrumb_trail) {
 }
 
 
-
 function cc_author_get_author_news_query($author_id, $count) {
   $args = array(
     'author'        =>  $author_id,
@@ -60,7 +51,6 @@ function cc_author_get_author_news_query($author_id, $count) {
   );
   return new WP_Query( $args );
 }
-
 
 
 function cc_author_add_custom_user_profile_fields( $user ) {

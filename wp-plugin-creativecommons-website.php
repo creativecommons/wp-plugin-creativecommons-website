@@ -25,10 +25,7 @@
  * GNU General Public License for more details.
  */
 
-include_once 'cc-author-group-taxonomy.php';
-include_once 'widgets/cc-author-news-widget.php';
-include_once 'widgets/cc-author-navigation-sidebar-widget.php';
-include_once 'shortcodes/cc-author-shortcode-team.php';
+include_once 'cc-author/cc-author.php'
 
 /* CC Gutenberg blocks */
 function load_cc_gutenberg_blocks()
