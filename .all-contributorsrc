@@ -31,11 +31,20 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "altrugon",
+      "name": "Alberto Trujillo González",
+      "avatar_url": "https://avatars.githubusercontent.com/u/398069?v=4",
+      "profile": "http://altrugon.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
-  "projectName": "wp-plugin-cc-gutenberg-blocks",
+  "projectName": "wp-plugin-creativecommons-website",
   "projectOwner": "creativecommons",
   "repoType": "github",
   "repoHost": "https://github.com",
