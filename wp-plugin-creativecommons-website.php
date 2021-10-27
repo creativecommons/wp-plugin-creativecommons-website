@@ -25,7 +25,7 @@
  * GNU General Public License for more details.
  */
 
-include_once 'cc-author/cc-author.php'
+include_once 'cc-author/cc-author.php';
 
 /* CC Gutenberg blocks */
 function load_cc_gutenberg_blocks()
