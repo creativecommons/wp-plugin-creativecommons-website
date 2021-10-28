@@ -30,14 +30,6 @@ include_once 'widgets/cc-author-news-widget.php';
 include_once 'widgets/cc-author-navigation-sidebar-widget.php';
 include_once 'shortcodes/cc-author-shortcode-team.php';
 
-
-add_action( 'show_user_profile', 'cc_author_add_custom_user_profile_fields' );
-add_action( 'edit_user_profile', 'cc_author_add_custom_user_profile_fields' );
-
-add_action( 'personal_options_update',  'cc_author_save_custom_user_profile_fields' );
-add_action( 'edit_user_profile_update', 'cc_author_save_custom_user_profile_fields' );
-
-add_action('bcn_after_fill', 'cc_author_customize_breadcrumb');
 function cc_author_customize_breadcrumb($breadcrumb_trail) {
   global $wp_query;
   if ( is_author() ){
@@ -50,7 +42,6 @@ function cc_author_customize_breadcrumb($breadcrumb_trail) {
 }
 
 
-
 function cc_author_get_author_news_query($author_id, $count) {
   $args = array(
     'author'        =>  $author_id,
@@ -60,7 +51,6 @@ function cc_author_get_author_news_query($author_id, $count) {
   );
   return new WP_Query( $args );
 }
-
 
 
 function cc_author_add_custom_user_profile_fields( $user ) {
@@ -121,12 +111,12 @@ function cc_author_save_custom_user_profile_fields( $user_id ) {
   if ( !current_user_can( 'edit_user', $user_id ) ){
     return FALSE;
   }
-  update_usermeta( $user_id, 'cc_position', $_POST['cc_position'] );
-  update_usermeta( $user_id, 'cc_group', $_POST['cc_group'] );
-  update_usermeta( $user_id, 'cc_linkedin', $_POST['cc_linkedin'] );
-  update_usermeta( $user_id, 'cc_since', $_POST['cc_since'] );
-  update_usermeta( $user_id, 'cc_location', $_POST['cc_location'] );
-  update_usermeta( $user_id, 'cc_biography', htmlspecialchars($_POST['cc_biography']));
+  update_user_meta( $user_id, 'cc_position', $_POST['cc_position'] );
+  update_user_meta( $user_id, 'cc_group', $_POST['cc_group'] );
+  update_user_meta( $user_id, 'cc_linkedin', $_POST['cc_linkedin'] );
+  update_user_meta( $user_id, 'cc_since', $_POST['cc_since'] );
+  update_user_meta( $user_id, 'cc_location', $_POST['cc_location'] );
+  update_user_meta( $user_id, 'cc_biography', htmlspecialchars($_POST['cc_biography']));
 
   cc_author_group_save_terms($user_id);
 
