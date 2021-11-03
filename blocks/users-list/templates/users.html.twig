@@ -1,0 +1,8 @@
+<div class="grid-container">
+    {% for key,user in users %}
+    <div class="grid-item" id="{{user.slug}}">
+        {{user.avatar | raw}}
+        <div class="username">{{user.slug}}</div>
+    </div>
+    {% endfor %}
+</div>

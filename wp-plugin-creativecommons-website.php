@@ -26,24 +26,59 @@
  */
 
 include_once 'cc-author/cc-author.php';
+include(plugin_dir_path(__FILE__) . 'blocks/users-list/query.php');
+require(plugin_dir_path(__FILE__) . '/vendor/autoload.php');
 
 /* CC Gutenberg blocks */
 function load_cc_gutenberg_blocks()
 {
-    wp_enqueue_script(
-        'myguten-script',
-        plugins_url('build/index.js', __FILE__),
-        array('wp-blocks')
+    $asset_file = include(plugin_dir_path(__FILE__) . 'build/index.asset.php');
 
+    wp_register_script(
+        'Creative Commons website plugin',
+        plugins_url('build/index.js', __FILE__),
+        $asset_file['dependencies'],
+        $asset_file['version']
     );
 
-    register_block_type('common/users-list');
+    // Adding custom styles
+    wp_register_style(
+        'Creative Commons website plugin',
+        plugins_url('styles/users-list.css', __FILE__),
+        array(),
+        filemtime(plugin_dir_path(__FILE__) . 'styles/users-list.css')
+    );
+    wp_style_add_data('Creative Commons website plugin', 'path', dirname(__FILE__) . 'styles/users-list.css');
+
+    //Registering block
+    register_block_type('common/users-list', array(
+        'api_version' => 2,
+        'style' => 'Creative Commons website plugin',
+        'editor_script' => 'Creative Commons website plugin',
+        'render_callback' => 'users_list_renderer',
+        'attributes'      => array(
+            'selectedValue' => array(
+                'type' => 'string'
+            )
+        )
+    ));
 }
-add_action('enqueue_block_editor_assets', 'load_cc_gutenberg_blocks');
+add_action('init', 'load_cc_gutenberg_blocks');
 
 /* CC Author */
-add_action( 'show_user_profile', 'cc_author_add_custom_user_profile_fields' );
-add_action( 'edit_user_profile', 'cc_author_add_custom_user_profile_fields' );
-add_action( 'personal_options_update',  'cc_author_save_custom_user_profile_fields' );
-add_action( 'edit_user_profile_update', 'cc_author_save_custom_user_profile_fields' );
+add_action('show_user_profile', 'cc_author_add_custom_user_profile_fields');
+add_action('edit_user_profile', 'cc_author_add_custom_user_profile_fields');
+add_action('personal_options_update',  'cc_author_save_custom_user_profile_fields');
+add_action('edit_user_profile_update', 'cc_author_save_custom_user_profile_fields');
 add_action('bcn_after_fill', 'cc_author_customize_breadcrumb');
+
+
+if (!function_exists('user_group')) {
+    function user_group()
+    {
+        register_taxonomy('group', 'user', array(
+            'show_in_rest'               => true,
+        ));
+    }
+    add_action('init', 'user_group', 0);
+}
