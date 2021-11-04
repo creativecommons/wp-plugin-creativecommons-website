@@ -22,7 +22,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			<option value="">All</option>
 
 			{ userGroups && userGroups.map( function( taxo, i ) {
-				return <option key={ i } value={ taxo.id }>{ taxo.name }</option>;
+				return <option key={ taxo.id } value={ taxo.id }>{ taxo.name }</option>;
 			} ) }
 
 		</select>
