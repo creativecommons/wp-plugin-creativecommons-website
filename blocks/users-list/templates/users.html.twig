@@ -1,8 +1,28 @@
-<div class="grid-container">
-    {% for key,user in users %}
-    <div class="grid-item" id="{{user.slug}}">
-        {{user.avatar | raw}}
-        <div class="username">{{user.slug}}</div>
+<div>
+    {% if is_preview != true %}
+    <label htmlFor="terms">Choose a role: </label>
+    <select name="terms" id="terms">
+        <option {% if selected=="" %}  selected {% endif %} value="">All</option>
+        {% for user_group in user_groups %}
+        <option key="{{ user_group.term_id }}" {% if selected != "" and selected==user_group.term_id %}  selected {% endif %} value="{{ user_group.term_id }}">{{ user_group.name }}</option>
+        {% endfor %}
+    </select>
+    {% endif %}
+
+    <div class="grid-container">
+    {% if users.length > 0 %}
+        {{no_users_message}}
+    {% else %}
+        {% for key,user in users %}
+        <div class="grid-item" id="{{user.display_name}}">
+            <div>
+                {{user.avatar | raw}}
+                <div class="username">{{user.display_name}}</div>
+                <div class="cc_position">{{user.cc_position}}</div>
+                <div class="description">{{user.description}}</div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
     </div>
-    {% endfor %}
 </div>
