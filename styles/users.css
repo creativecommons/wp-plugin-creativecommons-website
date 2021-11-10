@@ -1,0 +1,16 @@
+.username {
+	font-size: 1.2rem;
+	font-weight: 700;
+	padding-top: 0.8em;
+	color: #c74200;
+}
+.cc_position {
+	font-size: 0.9rem;
+	padding-bottom: 0.7em;
+	font-weight: bold;
+	line-height: 0.5rem;
+}
+
+.description {
+	font-size: 0.9rem;
+}

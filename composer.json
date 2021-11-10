@@ -1,0 +1,11 @@
+{
+    "name": "creativecommons/wp-plugin",
+    "autoload": {
+        "psr-4": {
+            "Creativecommons\\WpPlugin\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.3"
+    }
+}

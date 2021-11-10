@@ -7,4 +7,9 @@ export const settings = {
 	category: 'widgets',
 	icon: 'admin-users',
 	edit: Edit,
+	attributes: {
+		selectedValue: {
+			type: 'string',
+		},
+	},
 };
