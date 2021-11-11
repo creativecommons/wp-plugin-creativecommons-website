@@ -27,7 +27,7 @@
 
 include_once 'cc-author/cc-author.php';
 include(plugin_dir_path(__FILE__) . 'blocks/users-list/query.php');
-require(plugin_dir_path(__FILE__) . '/vendor/autoload.php');
+require(plugin_dir_path(__FILE__) . 'vendor/autoload.php');
 
 /* CC Gutenberg blocks */
 function load_cc_gutenberg_blocks()
