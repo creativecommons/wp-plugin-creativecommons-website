@@ -28,6 +28,7 @@
 include_once 'cc-author/cc-author.php';
 include(plugin_dir_path(__FILE__) . 'blocks/users-list/query.php');
 require(plugin_dir_path(__FILE__) . 'vendor/autoload.php');
+require(plugin_dir_path(__FILE__) . 'block-patterns/team-member-profile.php');
 
 /* CC Gutenberg blocks */
 function load_cc_gutenberg_blocks()
@@ -42,13 +43,11 @@ function load_cc_gutenberg_blocks()
     );
 
     // Adding custom styles
-    wp_register_style(
+    wp_enqueue_style(
         'Creative Commons website plugin',
         plugins_url('styles/users-list.css', __FILE__),
-        array(),
         filemtime(plugin_dir_path(__FILE__) . 'styles/users-list.css')
     );
-    wp_style_add_data('Creative Commons website plugin', 'path', dirname(__FILE__) . 'styles/users-list.css');
 
     //Registering block
     register_block_type('common/users-list', array(
