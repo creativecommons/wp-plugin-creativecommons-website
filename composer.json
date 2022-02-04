@@ -1,11 +1,26 @@
 {
-    "name": "creativecommons/wp-plugin",
-    "autoload": {
-        "psr-4": {
-            "Creativecommons\\WpPlugin\\": "src/"
-        }
-    },
-    "require": {
-        "twig/twig": "^3.3"
+  "autoload": {
+    "psr-4": {
+      "Creativecommons\\WpPlugin\\": "src/"
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "description": "CreativeCommons.org website WordPress plugin",
+  "license": "GPL-3.0-or-later",
+  "name": "creativecommons/wp-plugin-creativecommons-website",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.0",
+    "twig/twig": "^3.3"
+  },
+  "type": "wordpress-plugin"
 }
