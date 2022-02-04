@@ -1,11 +1,14 @@
 {
-    "name": "creativecommons/wp-plugin",
-    "autoload": {
-        "psr-4": {
-            "Creativecommons\\WpPlugin\\": "src/"
-        }
-    },
-    "require": {
-        "twig/twig": "^3.3"
+  "autoload": {
+    "psr-4": {
+      "Creativecommons\\WpPlugin\\": "src/"
     }
+  },
+  "description": "Creative Commons website WordPress plugin",
+  "license": "GPL-3.0-or-later",
+  "name": "creativecommons/wp-plugin-creativecommons-website",
+  "require": {
+    "twig/twig": "^3.3"
+  },
+  "type": "wordpress-plugin"
 }
