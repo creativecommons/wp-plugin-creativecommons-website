@@ -6,7 +6,7 @@
  * Author URI: http://creativecommons.org
  * Plugin URI: http://creativecommons.org
  * Description: Customizations of the Author for the Creative Commons site.
- * Version: 1.0.0
+ * Version: 0.2.0
  * License: GPL2
  *
  * --------------------------------------------------------------------
