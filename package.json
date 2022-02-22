@@ -4,7 +4,6 @@
 	"description": "",
 	"private": true,
 	"scripts": {
-		"deploy": "npm i && npm run build",
 		"build": "wp-scripts build blocks/index.js",
 		"start": "wp-scripts start blocks/index.js",
 		"wp-env": "wp-env",
