@@ -54,6 +54,13 @@ Below you will find some information on how to run scripts.
 - Use to build production code for your block inside `build` folder.
 - Runs once and reports back the gzip file sizes of the produced code.
 
+## Javascript deploy steps
+Since this plugin is to be used as a composer package, this repo needs to include the ReactJS build. So before creating a PR to this repo, 
+1. run `npm run build` and 
+2. commit the build folder.
+
+Note, you will need to run `npm install` in order for the build process to work.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
